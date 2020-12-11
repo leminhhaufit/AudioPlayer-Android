@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hinhnen"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/btnplay"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTuanguoc"
+        app:layout_constraintStart_toEndOf="@+id/btnTuanguoc"
+        app:layout_constraintTop_toTopOf="@+id/btnTuanguoc"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <ImageView
+        android:id="@+id/btnTuatoi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnplay"
+        app:layout_constraintStart_toEndOf="@+id/btnplay"
+        app:layout_constraintTop_toTopOf="@+id/btnplay"
+        app:srcCompat="@drawable/ic_baseline_redo_24" />
+
+    <ImageView
+        android:id="@+id/btnNgaunhien"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSkipNext"
+        app:layout_constraintStart_toEndOf="@+id/btnSkipNext"
+        app:layout_constraintTop_toTopOf="@+id/btnSkipNext"
+        app:srcCompat="@drawable/ic_baseline_shuffle_24" />
+
+    <ImageView
+        android:id="@+id/btnSkipNext"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTuatoi"
+        app:layout_constraintStart_toEndOf="@+id/btnTuatoi"
+        app:layout_constraintTop_toTopOf="@+id/btnTuatoi"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+    <ImageView
+        android:id="@+id/btnSkipPre"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRepeat"
+        app:layout_constraintStart_toEndOf="@+id/btnRepeat"
+        app:layout_constraintTop_toTopOf="@+id/btnRepeat"
+        app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+    <ImageView
+        android:id="@+id/btnRepeat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTatam"
+        app:layout_constraintStart_toEndOf="@+id/btnTatam"
+        app:layout_constraintTop_toTopOf="@+id/btnTatam"
+        app:srcCompat="@drawable/ic_baseline_sync_24" />
+
+    <ImageView
+        android:id="@+id/btnTuanguoc"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSkipPre"
+        app:layout_constraintStart_toEndOf="@+id/btnSkipPre"
+        app:layout_constraintTop_toTopOf="@+id/btnSkipPre"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_undo_24" />
+
+    <ImageView
+        android:id="@+id/btnTatam"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="223dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRepeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_volume_off_24" />
+
+    <TextView
+        android:id="@+id/lbTen"
+        android:layout_width="307dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="326dp"
+        android:text="Nhac....."
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recly"
+        android:layout_width="396dp"
+        android:layout_height="201dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/list_item" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="32dp"
+        android:thumbTint="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/btnplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:layout_marginEnd="16dp"
+        android:text="3:20"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBottom_toBottomOf="@+id/lbPos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbPos"
+        app:layout_constraintTop_toTopOf="@+id/lbPos" />
+
+    <TextView
+        android:id="@+id/lbPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="3:20"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
